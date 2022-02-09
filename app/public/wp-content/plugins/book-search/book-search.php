@@ -160,8 +160,8 @@ function my_ajax_filter_search_callback() {
         while ( $search_query->have_posts() ) {
             $search_query->the_post();
 			
-			$bookauthor = strip_tags( get_terms(", ") );
-            $bookpublisher = strip_tags( get_terms(", ") );
+			$bookauthor = strip_tags( get_the_terms(", ") );
+            $bookpublisher = strip_tags( get_the_terms(", ") );
             $result[] = array(
                 "id" => get_the_ID(),
                 "title" => get_the_title(),
