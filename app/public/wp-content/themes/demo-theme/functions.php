@@ -46,7 +46,7 @@ function demo_theme_setup() {
 			'color' => '#eee'
 		),
 	));
-	add_theme_support('disable-custom-colors');
+	// add_theme_support('disable-custom-colors');
 	add_theme_support('editor-gradient-presets', array(
 		array(
 			'name' => esc_attr__('Red to Blue', 'themeLangDomain'),
@@ -59,7 +59,7 @@ function demo_theme_setup() {
 			'slug' => 'green-to-yellow'
 		),
 	));
-	add_theme_support('disable-custom-gradients');
+	// add_theme_support('disable-custom-gradients');
 	add_theme_support('editor-font-sizes', array(
 		array(
 			'name' => esc_attr__('Small', 'themeLangDomain'),
