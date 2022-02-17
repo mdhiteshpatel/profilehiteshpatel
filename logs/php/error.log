@@ -969,3 +969,9 @@ Stack trace:
 #4 /Users/hiteshpatel/Local Sites/profilehiteshpatel/app/public/wp-includes/template-loader.php(106): include('/Users/hiteshpa...')
 #5 /Users/hiteshpatel/Local Sites/profilehiteshpatel/app/public/wp-blog-header.php(19): require_once('/Users/hiteshpa...')
 #6 /Users/hiteshpatel/Local Sites/profilehiteshpatel/ in /Users/hiteshpatel/Local Sites/profilehiteshpatel/app/public/wp-content/plugins/book-search/search-shortcode.php on line 3
+[17-Feb-2022 14:07:05 UTC] PHP Parse error:  syntax error, unexpected '$recent_posts' (T_VARIABLE) in /Users/hiteshpatel/Local Sites/profilehiteshpatel/app/public/wp-content/plugins/blocks-course-latest-posts/plugin.php on line 28
+[17-Feb-2022 14:07:05 UTC] PHP Parse error:  syntax error, unexpected '$recent_posts' (T_VARIABLE) in /Users/hiteshpatel/Local Sites/profilehiteshpatel/app/public/wp-content/plugins/blocks-course-latest-posts/plugin.php on line 28
+[17-Feb-2022 14:07:17 UTC] PHP Parse error:  syntax error, unexpected '$recent_posts' (T_VARIABLE) in /Users/hiteshpatel/Local Sites/profilehiteshpatel/app/public/wp-content/plugins/blocks-course-latest-posts/plugin.php on line 28
+[17-Feb-2022 14:07:17 UTC] PHP Parse error:  syntax error, unexpected '$recent_posts' (T_VARIABLE) in /Users/hiteshpatel/Local Sites/profilehiteshpatel/app/public/wp-content/plugins/blocks-course-latest-posts/plugin.php on line 28
+[17-Feb-2022 14:08:10 UTC] PHP Parse error:  syntax error, unexpected '$recent_posts' (T_VARIABLE) in /Users/hiteshpatel/Local Sites/profilehiteshpatel/app/public/wp-content/plugins/blocks-course-latest-posts/plugin.php on line 28
+[17-Feb-2022 14:08:10 UTC] PHP Parse error:  syntax error, unexpected '$recent_posts' (T_VARIABLE) in /Users/hiteshpatel/Local Sites/profilehiteshpatel/app/public/wp-content/plugins/blocks-course-latest-posts/plugin.php on line 28

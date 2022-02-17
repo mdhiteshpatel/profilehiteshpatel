@@ -4,12 +4,23 @@ import { __ } from "@wordpress/i18n";
 import { useSelect } from "@wordpress/data";
 import { usePrevious } from "@wordpress/compose";
 import { isBlobURL, revokeBlobURL } from '@wordpress/blob';
-import { Spinner, withNotices, ToolbarButton, PanelBody, TextareaControl, SelectControl, Icon, Tooltip } from '@wordpress/components';
+import { Spinner, withNotices, ToolbarButton, PanelBody, TextareaControl, SelectControl, Icon, Tooltip, TextControl, Button } from '@wordpress/components';
+import { DndContext, useSensor, useSensors, PointerSensor } from "@dnd-kit/core";
+import { SortableContext, horizontalListSortingStrategy, arrayMove } from "@dnd-kit/sortable";
+import { restrictToHorizontalAxis } from "@dnd-kit/modifiers";
+import SortableItem from "./sortable-item";
 
 function Edit({ attributes, setAttributes, noticeOperations, noticeUI, isSelected }) {
     const { name, bio, url, alt, id, socialLinks } = attributes;
     const [blobURL, setBlobURL] = useState();
+    const [selectedLink, setSelectedLink] = useState();
     const prevURL = usePrevious(url);
+    const prevIsSelected = usePrevious(isSelected);
+    const sensors = useSensors(
+        useSensor(PointerSensor, {
+            activationConstraint: { distance: 5 },
+        })
+    );
     const titleRef = useRef();
     const imageObject = useSelect((select) => {
         const { getMedia } = select("core");
@@ -71,6 +82,41 @@ function Edit({ attributes, setAttributes, noticeOperations, noticeUI, isSelecte
             id: undefined
         })
     }
+    const addNewSocialItem = () => {
+        setAttributes({
+            socialLinks: [...socialLinks, { icon: "wordpress", link: "" }]
+        });
+        setSelectedLink(socialLinks.length);
+    };
+    const updateSocialItem = (type, value) => {
+        const socialLinksCopy = [...socialLinks];
+        socialLinksCopy[selectedLink][type] = value;
+        setAttributes({ socialLinks: socialLinksCopy });
+    }
+    const removeSocialItem = () => {
+        setAttributes({
+            socialLinks: [
+                ...socialLinks.slice(0, selectedLink),
+                ...socialLinks.slice(selectedLink + 1)
+            ]
+        });
+        setSelectedLink();
+    };
+    const handleDragEnd = (event) => {
+        const { active, over } = event;
+        if (active && over && active.id !== over.id) {
+            const oldIndex = socialLinks.findIndex(
+                (i) => active.id === `${i.icon}-${i.link}`
+            );
+            const newIndex = socialLinks.findIndex(
+                (i) => over.id === `${i.icon}-${i.link}`
+            );
+            setAttributes({
+                socialLinks: arrayMove(socialLinks, oldIndex, newIndex)
+            });
+            setSelectedLink(newIndex);
+        }
+    };
     useEffect(() => {
         if (!id && isBlobURL(url)) {
             setAttributes({
@@ -88,11 +134,16 @@ function Edit({ attributes, setAttributes, noticeOperations, noticeUI, isSelecte
         }
     }, [url]);
     useEffect(() => {
-        if(url && !prevURL) {
+        if (url && !prevURL && isSelected) {
             titleRef.current.focus();
         }
-        
+
     }, [url, prevURL])
+    useEffect(() => {
+        if (prevIsSelected && !isSelected) {
+            setSelectedLink();
+        }
+    }, [isSelected, prevIsSelected])
     return (
         <>
             <InspectorControls>
@@ -168,26 +219,66 @@ function Edit({ attributes, setAttributes, noticeOperations, noticeUI, isSelecte
                 />
                 <div className="wp-block-blocks-course-team-member-social-links">
                     <ul>
-                        {socialLinks.map((item, index) => {
-                            return (
-                                <li key={index}>
-                                    <Icon icon={item.icon}/>
-                                </li>
-                            );
-                        })}
-                        {isSelected && (
-                        <li className="wp-block-blocks-course-team-member-add-icon-li">
-                            <Tooltip
-                                text={__("Add Social Link", "team-members")}
+                        <DndContext
+                            sensors={sensors}
+                            onDragEnd={handleDragEnd}
+                            modifiers={[restrictToHorizontalAxis]}
+                        >
+                            <SortableContext items={socialLinks.map(item => `${item.icon}-${item.link}`)}
+                                strategy={horizontalListSortingStrategy}
                             >
-                            <button aria-label={__("Add Social Link", "team-members")}>
-                                <Icon icon="plus" />
-                            </button>
-                            </Tooltip>
-                        </li>
+                                {socialLinks.map((item, index) => {
+                                    return (
+                                        <SortableItem
+                                            key={`${item.icon}-${item.link}`}
+                                            id={`${item.icon}-${item.link}`}
+                                            index={index}
+                                            selectedLink={selectedLink}
+                                            setSelectedLink={setSelectedLink}
+                                            icon={item.icon}
+                                        />
+                                    )
+                                })}
+                            </SortableContext>
+                        </DndContext>
+                        {isSelected && (
+                            <li className="wp-block-blocks-course-team-member-add-icon-li">
+                                <Tooltip
+                                    text={__("Add Social Link", "team-members")}
+                                >
+                                    <button
+                                        aria-label={__("Add Social Link", "team-members")}
+                                        onClick={addNewSocialItem}
+                                    >
+                                        <Icon icon="plus" />
+                                    </button>
+                                </Tooltip>
+                            </li>
                         )}
                     </ul>
                 </div>
+                {selectedLink !== undefined && (
+                    <div className="wp-block-blocks-course-team-member-link-form">
+                        <TextControl
+                            label={__("Icon", "team-members")}
+                            value={socialLinks[selectedLink].icon}
+                            onChange={(icon) => {
+                                updateSocialItem('icon', icon);
+                            }}
+                        />
+                        <TextControl
+                            label={__("URL", "team-members")}
+                            value={socialLinks[selectedLink].link}
+                            onChange={(link) => {
+                                updateSocialItem('link', link);
+                            }}
+                        />
+                        <br />
+                        <Button isDestructive onClick={removeSocialItem}>
+                            {__("Remove Link", "team-members")}
+                        </Button>
+                    </div>
+                )}
             </div>
         </>
     );
