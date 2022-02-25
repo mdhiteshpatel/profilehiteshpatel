@@ -1,0 +1,15 @@
+{
+	"apiVersion": 2,
+	"name": "blocks-course/todo-list",
+	"title": "To Do List",
+	"category": "widgets",
+	"icon": "editor-ul",
+	"description": "Display and edit todos in the data store.",
+	"supports": {
+		"html": false
+	},
+	"textdomain": "todo-list",
+	"editorScript": "file:./build/index.js",
+	"editorStyle": "file:./build/index.css",
+	"style": "file:./build/style-index.css"
+}

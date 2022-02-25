@@ -975,3 +975,54 @@ Stack trace:
 [17-Feb-2022 14:07:17 UTC] PHP Parse error:  syntax error, unexpected '$recent_posts' (T_VARIABLE) in /Users/hiteshpatel/Local Sites/profilehiteshpatel/app/public/wp-content/plugins/blocks-course-latest-posts/plugin.php on line 28
 [17-Feb-2022 14:08:10 UTC] PHP Parse error:  syntax error, unexpected '$recent_posts' (T_VARIABLE) in /Users/hiteshpatel/Local Sites/profilehiteshpatel/app/public/wp-content/plugins/blocks-course-latest-posts/plugin.php on line 28
 [17-Feb-2022 14:08:10 UTC] PHP Parse error:  syntax error, unexpected '$recent_posts' (T_VARIABLE) in /Users/hiteshpatel/Local Sites/profilehiteshpatel/app/public/wp-content/plugins/blocks-course-latest-posts/plugin.php on line 28
+[18-Feb-2022 13:37:25 UTC] PHP Warning:  Use of undefined constant ’ - assumed '’' (this will throw an Error in a future version of PHP) in /Users/hiteshpatel/Local Sites/profilehiteshpatel/app/public/wp-content/plugins/post-likes-counter/post-likes-counter.php on line 25
+[18-Feb-2022 13:37:25 UTC] PHP Stack trace:
+[18-Feb-2022 13:37:25 UTC] PHP   1. {main}() /Users/hiteshpatel/Local Sites/profilehiteshpatel/app/public/wp-admin/admin-ajax.php:0
+[18-Feb-2022 13:37:25 UTC] PHP   2. do_action() /Users/hiteshpatel/Local Sites/profilehiteshpatel/app/public/wp-admin/admin-ajax.php:187
+[18-Feb-2022 13:37:25 UTC] PHP   3. WP_Hook->do_action() /Users/hiteshpatel/Local Sites/profilehiteshpatel/app/public/wp-includes/plugin.php:474
+[18-Feb-2022 13:37:25 UTC] PHP   4. WP_Hook->apply_filters() /Users/hiteshpatel/Local Sites/profilehiteshpatel/app/public/wp-includes/class-wp-hook.php:331
+[18-Feb-2022 13:37:25 UTC] PHP   5. my_user_like() /Users/hiteshpatel/Local Sites/profilehiteshpatel/app/public/wp-includes/class-wp-hook.php:307
+[18-Feb-2022 13:37:25 UTC] PHP Warning:  A non-numeric value encountered in /Users/hiteshpatel/Local Sites/profilehiteshpatel/app/public/wp-content/plugins/post-likes-counter/post-likes-counter.php on line 26
+[18-Feb-2022 13:37:25 UTC] PHP Stack trace:
+[18-Feb-2022 13:37:25 UTC] PHP   1. {main}() /Users/hiteshpatel/Local Sites/profilehiteshpatel/app/public/wp-admin/admin-ajax.php:0
+[18-Feb-2022 13:37:25 UTC] PHP   2. do_action() /Users/hiteshpatel/Local Sites/profilehiteshpatel/app/public/wp-admin/admin-ajax.php:187
+[18-Feb-2022 13:37:25 UTC] PHP   3. WP_Hook->do_action() /Users/hiteshpatel/Local Sites/profilehiteshpatel/app/public/wp-includes/plugin.php:474
+[18-Feb-2022 13:37:25 UTC] PHP   4. WP_Hook->apply_filters() /Users/hiteshpatel/Local Sites/profilehiteshpatel/app/public/wp-includes/class-wp-hook.php:331
+[18-Feb-2022 13:37:25 UTC] PHP   5. my_user_like() /Users/hiteshpatel/Local Sites/profilehiteshpatel/app/public/wp-includes/class-wp-hook.php:307
+[18-Feb-2022 13:37:33 UTC] PHP Warning:  Use of undefined constant ’ - assumed '’' (this will throw an Error in a future version of PHP) in /Users/hiteshpatel/Local Sites/profilehiteshpatel/app/public/wp-content/plugins/post-likes-counter/post-likes-counter.php on line 25
+[18-Feb-2022 13:37:33 UTC] PHP Stack trace:
+[18-Feb-2022 13:37:33 UTC] PHP   1. {main}() /Users/hiteshpatel/Local Sites/profilehiteshpatel/app/public/wp-admin/admin-ajax.php:0
+[18-Feb-2022 13:37:33 UTC] PHP   2. do_action() /Users/hiteshpatel/Local Sites/profilehiteshpatel/app/public/wp-admin/admin-ajax.php:187
+[18-Feb-2022 13:37:33 UTC] PHP   3. WP_Hook->do_action() /Users/hiteshpatel/Local Sites/profilehiteshpatel/app/public/wp-includes/plugin.php:474
+[18-Feb-2022 13:37:33 UTC] PHP   4. WP_Hook->apply_filters() /Users/hiteshpatel/Local Sites/profilehiteshpatel/app/public/wp-includes/class-wp-hook.php:331
+[18-Feb-2022 13:37:33 UTC] PHP   5. my_user_like() /Users/hiteshpatel/Local Sites/profilehiteshpatel/app/public/wp-includes/class-wp-hook.php:307
+[18-Feb-2022 13:42:28 UTC] PHP Warning:  Use of undefined constant ’ - assumed '’' (this will throw an Error in a future version of PHP) in /Users/hiteshpatel/Local Sites/profilehiteshpatel/app/public/wp-content/plugins/post-likes-counter/post-likes-counter.php on line 25
+[18-Feb-2022 13:42:28 UTC] PHP Stack trace:
+[18-Feb-2022 13:42:28 UTC] PHP   1. {main}() /Users/hiteshpatel/Local Sites/profilehiteshpatel/app/public/wp-admin/admin-ajax.php:0
+[18-Feb-2022 13:42:28 UTC] PHP   2. do_action() /Users/hiteshpatel/Local Sites/profilehiteshpatel/app/public/wp-admin/admin-ajax.php:187
+[18-Feb-2022 13:42:28 UTC] PHP   3. WP_Hook->do_action() /Users/hiteshpatel/Local Sites/profilehiteshpatel/app/public/wp-includes/plugin.php:474
+[18-Feb-2022 13:42:28 UTC] PHP   4. WP_Hook->apply_filters() /Users/hiteshpatel/Local Sites/profilehiteshpatel/app/public/wp-includes/class-wp-hook.php:331
+[18-Feb-2022 13:42:28 UTC] PHP   5. my_user_like() /Users/hiteshpatel/Local Sites/profilehiteshpatel/app/public/wp-includes/class-wp-hook.php:307
+[18-Feb-2022 13:42:29 UTC] PHP Warning:  Use of undefined constant ’ - assumed '’' (this will throw an Error in a future version of PHP) in /Users/hiteshpatel/Local Sites/profilehiteshpatel/app/public/wp-content/plugins/post-likes-counter/post-likes-counter.php on line 25
+[18-Feb-2022 13:42:29 UTC] PHP Stack trace:
+[18-Feb-2022 13:42:29 UTC] PHP   1. {main}() /Users/hiteshpatel/Local Sites/profilehiteshpatel/app/public/wp-admin/admin-ajax.php:0
+[18-Feb-2022 13:42:29 UTC] PHP   2. do_action() /Users/hiteshpatel/Local Sites/profilehiteshpatel/app/public/wp-admin/admin-ajax.php:187
+[18-Feb-2022 13:42:29 UTC] PHP   3. WP_Hook->do_action() /Users/hiteshpatel/Local Sites/profilehiteshpatel/app/public/wp-includes/plugin.php:474
+[18-Feb-2022 13:42:29 UTC] PHP   4. WP_Hook->apply_filters() /Users/hiteshpatel/Local Sites/profilehiteshpatel/app/public/wp-includes/class-wp-hook.php:331
+[18-Feb-2022 13:42:29 UTC] PHP   5. my_user_like() /Users/hiteshpatel/Local Sites/profilehiteshpatel/app/public/wp-includes/class-wp-hook.php:307
+[22-Feb-2022 05:24:33 UTC] PHP Parse error:  syntax error, unexpected end of file, expecting '(' in /Users/hiteshpatel/Local Sites/profilehiteshpatel/app/public/wp-content/plugins/wp-blocks-course-plugin-boilerplate/plugin.php on line 15
+[22-Feb-2022 05:26:35 UTC] PHP Parse error:  syntax error, unexpected end of file in /Users/hiteshpatel/Local Sites/profilehiteshpatel/app/public/wp-content/plugins/wp-blocks-course-plugin-boilerplate/plugin.php on line 18
+[24-Feb-2022 06:45:20 UTC] PHP Warning:  An unexpected error occurred. Something may be wrong with WordPress.org or this server&#8217;s configuration. If you continue to have problems, please try the <a href="https://wordpress.org/support/forums/">support forums</a>. (WordPress could not establish a secure connection to WordPress.org. Please contact your server administrator.) in /Users/hiteshpatel/Local Sites/profilehiteshpatel/app/public/wp-includes/update.php on line 413
+[24-Feb-2022 06:45:20 UTC] PHP Stack trace:
+[24-Feb-2022 06:45:20 UTC] PHP   1. {main}() /Users/hiteshpatel/Local Sites/profilehiteshpatel/app/public/wp-cron.php:0
+[24-Feb-2022 06:45:20 UTC] PHP   2. do_action_ref_array() /Users/hiteshpatel/Local Sites/profilehiteshpatel/app/public/wp-cron.php:138
+[24-Feb-2022 06:45:20 UTC] PHP   3. WP_Hook->do_action() /Users/hiteshpatel/Local Sites/profilehiteshpatel/app/public/wp-includes/plugin.php:522
+[24-Feb-2022 06:45:20 UTC] PHP   4. WP_Hook->apply_filters() /Users/hiteshpatel/Local Sites/profilehiteshpatel/app/public/wp-includes/class-wp-hook.php:331
+[24-Feb-2022 06:45:20 UTC] PHP   5. wp_version_check() /Users/hiteshpatel/Local Sites/profilehiteshpatel/app/public/wp-includes/class-wp-hook.php:307
+[24-Feb-2022 06:45:20 UTC] PHP   6. do_action() /Users/hiteshpatel/Local Sites/profilehiteshpatel/app/public/wp-includes/update.php:256
+[24-Feb-2022 06:45:20 UTC] PHP   7. WP_Hook->do_action() /Users/hiteshpatel/Local Sites/profilehiteshpatel/app/public/wp-includes/plugin.php:474
+[24-Feb-2022 06:45:20 UTC] PHP   8. WP_Hook->apply_filters() /Users/hiteshpatel/Local Sites/profilehiteshpatel/app/public/wp-includes/class-wp-hook.php:331
+[24-Feb-2022 06:45:20 UTC] PHP   9. wp_maybe_auto_update() /Users/hiteshpatel/Local Sites/profilehiteshpatel/app/public/wp-includes/class-wp-hook.php:307
+[24-Feb-2022 06:45:20 UTC] PHP  10. WP_Automatic_Updater->run() /Users/hiteshpatel/Local Sites/profilehiteshpatel/app/public/wp-includes/update.php:729
+[24-Feb-2022 06:45:20 UTC] PHP  11. wp_update_plugins() /Users/hiteshpatel/Local Sites/profilehiteshpatel/app/public/wp-admin/includes/class-wp-automatic-updater.php:510
+[24-Feb-2022 06:45:20 UTC] PHP  12. trigger_error() /Users/hiteshpatel/Local Sites/profilehiteshpatel/app/public/wp-includes/update.php:413

@@ -1,0 +1,15 @@
+{
+	"apiVersion": 2,
+	"name": "blocks-course/todo-list-info",
+	"title": "To Do List Info",
+	"category": "widgets",
+	"icon": "info-outline",
+	"description": "Information about the todo list in the data store.",
+	"supports": {
+		"html": false
+	},
+	"textdomain": "todo-list-info",
+	"editorScript": "file:./build/index.js",
+	"editorStyle": "file:./build/index.css",
+	"style": "file:./build/style-index.css"
+}
